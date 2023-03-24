@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = "django-insecure-it@mj4n&2wq+4s*-4-@=@rg@e78^a$!y_l@k0(&gjh#s3q^rlg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -74,10 +75,14 @@ WSGI_APPLICATION = "shop.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    'default': {
+        'ENGINE': 'django_cockroachdb',
+        'NAME': os.environ.get('COCKROACH_DATABASE'),
+        'USER': os.environ.get('COCKROACH_USER'),
+        'PASSWORD': os.environ.get('COCKROACH_PASSWORD'),
+        'HOST': os.environ.get('COCKROACH_HOST'),
+        'PORT': os.environ.get('COCKROACH_PORT'),
+    },
 }
 
 
