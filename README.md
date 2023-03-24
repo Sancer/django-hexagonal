@@ -1,1 +1,1 @@
-# django-hexagonal
+# Django Hexagonal Example
