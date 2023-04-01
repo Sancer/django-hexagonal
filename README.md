@@ -15,7 +15,7 @@
 - [x] Create Shared context
 - [x] Create basic Value Objects
 - [x] Create a test ci github action
-- [ ] Create base Use Case
+- [x] Create base Use Case
 - [ ] Create domain Repository
 - [ ] Create basic repository implementation in Django
 - [ ] Make a first use case
