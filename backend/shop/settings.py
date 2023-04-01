@@ -32,12 +32,15 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    "django_ddd",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    "authentication.infrastructure.apps.AuthenticationConfig",
 ]
 
 MIDDLEWARE = [
@@ -126,3 +129,9 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CUSTOM_MODELS_MODULE = "infrastructure.models"
+CUSTOM_MIGRATIONS_MODULE = "infrastructure.migrations"
+CUSTOM_ADMIN_MODULE = "infrastructure.admin"
+
+AUTH_USER_MODEL = "authentication.User"
