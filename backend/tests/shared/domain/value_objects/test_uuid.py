@@ -25,4 +25,4 @@ class TestUuid(unittest.TestCase):
     def test_not_equal(self):
         obj1 = Uuid(str(uuid4()))
         obj2 = Uuid(str(uuid4()))
-        self.assertTrue(obj1 == obj2)
+        self.assertFalse(obj1 == obj2)
