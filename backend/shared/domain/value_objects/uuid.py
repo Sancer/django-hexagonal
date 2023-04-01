@@ -3,11 +3,12 @@ from __future__ import annotations
 from dataclasses import dataclass
 from uuid import UUID, uuid4
 
+from .value_object import ValueObject
 from .invalid_argument_error import InvalidArgumentError
 
 
 @dataclass(frozen=True)
-class Uuid:
+class Uuid(ValueObject):
     value: str
 
     def __post_init__(self) -> None:
