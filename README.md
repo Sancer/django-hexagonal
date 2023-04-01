@@ -13,7 +13,7 @@
 - [x] Change pk|id from integer autoincremental to uuid4
 - [x] Create first django app | context
 - [x] Create Shared context
-- [ ] Create basic Value Objects
+- [x] Create basic Value Objects
 - [ ] Create base Use Case
 - [ ] Create domain Repository
 - [ ] Create basic repository implementation in Django
