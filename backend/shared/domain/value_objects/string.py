@@ -2,13 +2,12 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from .value_object import ValueObject
+
 
 @dataclass(frozen=True)
-class String:
+class String(ValueObject):
     value: str
-
-    def __str__(self) -> str:
-        return f'{self.value}'
 
     def __add__(self, other: String) -> String:
         return String(f'{self}{other}')
