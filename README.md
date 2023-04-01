@@ -14,6 +14,7 @@
 - [x] Create first django app | context
 - [x] Create Shared context
 - [x] Create basic Value Objects
+- [x] Create a test ci github action
 - [ ] Create base Use Case
 - [ ] Create domain Repository
 - [ ] Create basic repository implementation in Django
