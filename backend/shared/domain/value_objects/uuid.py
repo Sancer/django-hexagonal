@@ -12,6 +12,7 @@ class Uuid(ValueObject):
     value: str
 
     def __post_init__(self) -> None:
+
         self.ensure_is_valid_uuid(self.value)
 
     def ensure_is_valid_uuid(self, value) -> None:
