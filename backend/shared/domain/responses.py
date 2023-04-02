@@ -10,3 +10,9 @@ T = TypeVar("T")
 class PaginatedResponse(Generic[T]):
     count: Integer
     results: list[T]
+
+    def dict(self):
+        return {
+            'count': self.count,
+            'results': [item.dict() for item in self.results]
+        }

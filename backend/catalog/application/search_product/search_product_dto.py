@@ -4,5 +4,5 @@ from shared.domain.value_objects import String
 
 
 @dataclass
-class SearchDto:
-    name: String
+class SearchProductDto:
+    name: str
