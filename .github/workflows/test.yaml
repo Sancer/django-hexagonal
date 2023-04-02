@@ -26,4 +26,5 @@ jobs:
         run: docker run ${{ github.ref_name }} pytest
 
       - name: Integration test
-        run: docker compose
+        working-directory: ${{ github.workspace }}
+        run: docker compose run backend make test/integration
