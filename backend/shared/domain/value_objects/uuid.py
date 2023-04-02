@@ -17,7 +17,7 @@ class Uuid(ValueObject):
     def ensure_is_valid_uuid(self, value) -> None:
         try:
             UUID(value, version=4)
-        except ValueError:
+        except (ValueError, AttributeError):
             raise InvalidArgumentError()
 
     @classmethod

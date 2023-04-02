@@ -16,6 +16,7 @@
 - [x] Create basic Value Objects
 - [x] Create a test ci github action
 - [x] Create base Use Case
-- [ ] Create domain Repository
-- [ ] Create basic repository implementation in Django
-- [ ] Make a first use case
+- [x] Create domain Repository
+- [x] Create basic repository implementation in Django
+- [x] Make a first use case
+- [ ] Do a product search use case functional with criteria pattern 

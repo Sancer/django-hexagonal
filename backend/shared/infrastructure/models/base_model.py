@@ -20,7 +20,7 @@ class BaseModel(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     created = models.DateTimeField(verbose_name=_(u'created date'), auto_now_add=True)
     modified = models.DateTimeField(verbose_name=_(u'modified date'), auto_now=True)
-    deleted = models.DateTimeField(verbose_name=_(u'deleted date'), null=True)
+    deleted = models.DateTimeField(verbose_name=_(u'deleted date'), null=True, blank=True)
 
     objects = BaseManager()
     all_objects = models.Manager()

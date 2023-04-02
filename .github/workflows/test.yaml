@@ -22,5 +22,8 @@ jobs:
       - name: Build
         run: docker build -t ${{ github.ref_name }} .
 
-      - name: Test with pytest
+      - name: Unit test
         run: docker run ${{ github.ref_name }} pytest
+
+      - name: Integration test
+        run: docker compose

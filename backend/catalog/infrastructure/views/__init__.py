@@ -1,0 +1,1 @@
+from .search_product_view import SearchProductView
