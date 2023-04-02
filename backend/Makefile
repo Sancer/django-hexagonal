@@ -1,8 +1,6 @@
 
-
 test: test/unitary test/integration
 	pytest
-
 
 test/unitary:
 	pytest

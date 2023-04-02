@@ -8,8 +8,8 @@ from dataclasses import dataclass
 class ValueObject:
     value: any
 
-    # def dict(self):
-    #     return self.value
+    def dict(self):
+        return self.value
 
     def json(self):
         return json.dumps(self.dict(), ensure_ascii=False)
