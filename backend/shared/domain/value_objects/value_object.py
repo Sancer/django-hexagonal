@@ -20,5 +20,5 @@ class ValueObject:
     def __eq__(self, other: ValueObject) -> bool:
         return isinstance(other, self.__class__) and self.value == other.value
 
-    def __repr__(self)-> str:
+    def __repr__(self) -> str:
         return self.json()
