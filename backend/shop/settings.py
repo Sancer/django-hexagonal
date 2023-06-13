@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -81,14 +83,7 @@ WSGI_APPLICATION = "shop.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django_cockroachdb',
-        'NAME': os.environ.get('COCKROACH_DATABASE'),
-        'USER': os.environ.get('COCKROACH_USER'),
-        'PASSWORD': os.environ.get('COCKROACH_PASSWORD'),
-        'HOST': os.environ.get('COCKROACH_HOST'),
-        'PORT': os.environ.get('COCKROACH_PORT'),
-    },
+    'default': dj_database_url.config(default=os.environ['DATABASE_URL'],)
 }
 
 
